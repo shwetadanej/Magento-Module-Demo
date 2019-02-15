@@ -1,0 +1,46 @@
+<div class="stagebit-blogs">
+    <?php $allblogs = $this->getListBlogs() ?>
+    <?php if($allblogs && count($allblogs)): ?>
+        <?php foreach($allblogs as $blogs): ?>
+            <div class="stagebit-blogs-list">
+
+                <div class="list-img">
+                    <div class="stagebit-blogs-image">
+                        <?php
+                        $path = $this->getMediaUrl().'stagebit_blog/featured_images/'.$blogs->getFeaturedImage();
+                        $img = '<img src='.$path. ' width="100" height="68">';
+                        echo $img;
+                        ?>
+                    </div>
+                </div>
+                <div class="list-info">
+                    <div class="stagebit-blogs-title">
+                        <a href="<?php echo $block->getBaseUrl() ?>blogs/<?php echo $blogs->getUrlKey(); ?>">
+                            <?php echo $blogs->getName() ?>
+                        </a>
+                    </div>
+                    <div class="stagebit-blogs-time"><?php echo date('d-m-Y',strtotime($blogs->getDisplayDate())) ?></div>
+                    <div class="stagebit-blogs-desc">
+                        <?php
+                        echo $blogs->getPostExcerpt()."...";
+                        ?>
+                        <a href="<?php echo $block->getBaseUrl() ?>blogs/<?php echo $blogs->getUrlKey(); ?>">
+                            Read more
+                        </a>
+                        <?php
+                        ?>
+                    </div>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
+
+        <?php if($this->getPagerHtml()): ?>
+            <?php echo $this->getPagerHtml(); ?>
+        <?php endif; ?>
+    <?php else: ?>
+        <div class="stagebit-blogs-no-records">
+            <?php echo __('Blogs not available'); ?>
+        </div>
+    <?php endif; ?>
+</div>

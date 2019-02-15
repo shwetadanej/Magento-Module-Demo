@@ -1,0 +1,59 @@
+.stagebit-blogs .stagebit-blogs-list {
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: -1px;
+}
+.stagebit-blogs .stagebit-blogs-list:nth-child(even){
+    background-color:#f1f1f1;
+}
+.stagebit-blogs .stagebit-blogs-list:nth-child(odd){
+    background-color:#FAFAFA;
+}
+.stagebit-blogs .stagebit-blogs-title {
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:5px;
+}
+.stagebit-blogs .stagebit-blogs-time {
+    font-size:14px;
+    color:#666;
+    font-style:italic;
+}
+.stagebit-blogs .pager {
+    margin-top:20px;
+    display:flex;
+}
+.stagebit-blogs .toolbar-amount {
+    margin-right:20px;
+}
+.stagebit-blogs .stagebit-blogs--desc {
+    margin-top:15px;
+}
+.stagebit-blogs a:hover {
+    text-decoration:none;
+}
+.stagebit-blogs-list{
+    display: flex !important;
+}
+
+.list-info{
+    padding-left: 15px;
+}
+.slide {
+    width: 100%;
+    height: 600px;
+}
+.owl-carousel{
+    display: block !important;
+}
+.list-img{
+    width:100px;
+}
+.list-info{
+    width: calc(100% - 100px);
+}
+.stagebit-blogs.view .stagebit-blogs-image img {
+    max-height: 600px;
+    width: auto;
+}

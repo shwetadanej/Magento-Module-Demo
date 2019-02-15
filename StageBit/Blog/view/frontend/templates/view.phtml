@@ -1,0 +1,19 @@
+<div class="stagebit-blogs view">
+    <?php $blog = $this->getBlog() ?>
+    <div class="stagebit-blogs-time"><?php echo date('d-m-Y',strtotime($blog->getDisplayDate())); ?></div>
+    <br/>
+    <div class="stagebit-blogs-image">
+        <?php
+        $path = $this->getMediaUrl().'stagebit_blog/featured_images/'.$blog->getFeaturedImage();
+        $img = '<img src='.$path. '>';
+        echo $img;
+        ?>
+    </div>
+
+    <h3>Description:</h3>
+    <div class="stagebit-blogs-desc"><?php echo $blog->getPostContent(); ?></div>
+    <h3>Author</h3>
+    <div class="stagebit-blogs-author"><?php echo $blog->getAuthorName(); ?></div>
+    <h3>Author website</h3>
+    <div class="stagebit-blogs-authorwebsite"><?php echo $blog->getAuthorWebsite(); ?></div>
+</div>

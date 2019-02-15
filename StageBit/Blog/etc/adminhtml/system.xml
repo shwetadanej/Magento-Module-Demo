@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="stagebit" translate="label" sortOrder="10">
+            <label>StageBit</label>
+        </tab>
+        <section id="blogs" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>stagebit-separator</class>
+            <label>Blogs</label>
+            <tab>stagebit</tab>
+            <resource>StageBit_Blog::blog_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="storefront" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Storefront</label>
+                <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+                <field id="post_count" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Number of blogs to display</label>
+                    <comment>Set number of limit for showing  latest blogs.</comment>
+                </field>
+                <field id="slider_post_count" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Slider blogs count</label>
+                    <comment>Set number of limit for showing latest blogs in slider.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

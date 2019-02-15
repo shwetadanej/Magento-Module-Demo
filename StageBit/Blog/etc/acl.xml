@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="StageBit_Blog::stagebit" title="Stagebit Blogs" sortOrder="51">
+                    <resource id="StageBit_Blog::stagebit_blog_allblogs" title="All Blogs" sortOrder="10">
+                        <resource id="StageBit_Blog::save" title="Save News" translate="title" sortOrder="10" />
+                        <resource id="StageBit_Blog::stagebit_blog_delete" title="Delete Blog" translate="title" sortOrder="20" />
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="StageBit_Blog::stagebit_blog_config" title="Stagebit Blogs" translate="title"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

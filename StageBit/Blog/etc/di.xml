@@ -1,0 +1,36 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+    <preference for="StageBit\Blog\Api\Data\AllblogsInterface" type="StageBit\Blog\Model\Allblogs" />
+    <preference for="StageBit\Blog\Api\AllblogsRepositoryInterface" type="StageBit\Blog\Model\AllblogsRepository" />
+
+    <virtualType name="AllblogsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">StageBit\Blog\Model\ResourceModel\Allblogs\Collection</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="stagebit_blog_allblogs_listing_data_source" xsi:type="string">StageBit\Blog\Model\ResourceModel\Allblogs\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="StageBit\Blog\Model\ResourceModel\Allblogs\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">stagebit_blogs</argument>
+            <argument name="eventPrefix" xsi:type="string">stagebit_blog_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">stagebit_blog_collection</argument>
+            <argument name="resourceModel" xsi:type="string">StageBit\Blog\Model\ResourceModel\Allblogs</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="StageBit\Blog\Api\Data\AllblogsInterface" xsi:type="string">StageBit\Blog\Api\AllblogsRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

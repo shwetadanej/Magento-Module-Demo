@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+
+        <!--<css src="StageBit_Blog::css/owl.carousel.css"/>-->
+        <!--<css src="StageBit_Blog::css/owl.theme.css"/>-->
+        <!--<css src="StageBit_Blog::css/stagebit.blogs.css" />-->
+    </head>
+    <body>
+        <referenceBlock name="content.bottom">
+            <block class="StageBit\Blog\Block\HomeSlider" name="blog_slider"  template="StageBit_Blog::homeslider.phtml"  />
+        </referenceBlock>
+    </body>
+</page>

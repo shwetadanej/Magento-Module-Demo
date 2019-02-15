@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <blogs>
+            <general>
+                <enable>1</enable>
+            </general>
+            <storefront>
+                <display_text>Stagebit Blogs</display_text>
+                <post_count>10</post_count>
+                <slider_post_count>10</slider_post_count>
+            </storefront>
+        </blogs>
+    </default>
+</config>

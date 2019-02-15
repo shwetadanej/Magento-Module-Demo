@@ -1,0 +1,36 @@
+<?php $allblogs = $this->getListBlogs() ?>
+<?php if ($allblogs && count($allblogs)): ?>
+    <h1 align="center">Recent Blogs</h1>
+    <div id="blog-slider" class="owl-carousel">
+        <?php foreach ($allblogs as $blogs): ?>
+
+            <?php
+            $path = $this->getMediaUrl() . 'stagebit_blog/featured_images/' . $blogs->getFeaturedImage();
+            ?>
+
+            <div class="item">
+                <a href="<?php echo $block->getBaseUrl() ?>blogs/<?php echo $blogs->getUrlKey(); ?>">
+                <img src="<?php echo $path ?>">
+                <h4><?php echo $blogs->getName(); ?></h4>
+                </a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <script type="text/javascript">
+        require(['jquery', 'owlCarousel'], function($) {
+            $('#blog-slider').owlCarousel({
+                items : 3,
+                autoplay:true,
+                loop:false,
+                nav : false,
+                dots: true,
+                autoplaySpeed : 500,
+                navSpeed : 500,
+                dotsSpeed : 500,
+                autoplayHoverPause: true,
+                margin:10
+            });
+        });
+    </script>
+<?php endif; ?>

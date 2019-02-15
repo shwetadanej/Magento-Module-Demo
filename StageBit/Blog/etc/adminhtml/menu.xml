@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<menu>
+
+    <!--Main menu-->
+    <add id="StageBit_Blog::stagebit" title="Stagebit Blogs" translate="title" module="StageBit_Blog" sortOrder="79" dependsOnModule="StageBit_Blog" resource="StageBit_Blog::stagebit"/>
+
+    <!--Menu heading-->
+    <add id="StageBit_Blog::stagebit_blog" title="Blogs" translate="title" module="StageBit_Blog" parent="StageBit_Blog::stagebit" sortOrder="50" dependsOnModule="StageBit_Blog" resource="StageBit_Blog::stagebit_blog"/>
+
+    <!--Submenu-->
+    <add id="StageBit_Blog::stagebit_blog_allblogs" title="All Blogs" translate="title" module="StageBit_Blog" parent="StageBit_Blog::stagebit_blog" sortOrder="10" dependsOnModule="StageBit_Blog" action="stagebit_blog/allblogs" resource="StageBit_Blog::stagebit_blog_allblogs"/>
+    <add id="StageBit_Blog::stagebit_blog_addblog" title="Add new blog" translate="title" module="StageBit_Blog" parent="StageBit_Blog::stagebit_blog" sortOrder="10" dependsOnModule="StageBit_Blog" action="stagebit_blog/allblogs/newaction" resource="StageBit_Blog::stagebit_blog_addblog"/>
+
+    <!--Menu heading-->
+    <add id="StageBit_Blog::settings" title="Settings" translate="title" module="StageBit_Blog" parent="StageBit_Blog::stagebit" sortOrder="60" dependsOnModule="StageBit_Blog" resource="StageBit_Blog::settings"/>
+
+    <!--Sumenu-->
+    <add id="StageBit_Blog::stagebit_blog_config" title="Configuration" translate="title" module="StageBit_Blog" parent="StageBit_Blog::settings" sortOrder="10" dependsOnModule="StageBit_Blog" action="adminhtml/system_config/edit/section/blog" resource="StageBit_Blog::stagebit_blog_config"/>
+</menu>
+</config>

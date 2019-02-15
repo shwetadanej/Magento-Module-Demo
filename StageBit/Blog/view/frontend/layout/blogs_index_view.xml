@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+    <css src="StageBit_Blog::css/stagebit.blogs.css" />
+</head>
+<body>
+    <referenceContainer name="content">
+        <block class="StageBit\Blog\Block\ViewBlog" name="view_blog" template="StageBit_Blog::view.phtml" />
+    </referenceContainer>
+</body>
+</page>
